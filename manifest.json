@@ -1,0 +1,10 @@
+{
+  "manifest_version": 3,
+  "name": "My Project",
+  "version": "1.0.0",
+  "description": "Chrome拡張機能の連携確認用",
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "My Project"
+  }
+}
