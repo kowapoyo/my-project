@@ -89,12 +89,12 @@ def run_news_agent():
 
     print("Searching for Vietnam news...")
     while True:
-        response = client.beta.messages.create(
+        response = client.messages.create(
             model="claude-opus-4-6",
             max_tokens=4096,
             tools=tools,
             messages=messages,
-            betas=["web-search-2025-03-05"],
+            extra_headers={"anthropic-beta": "web-search-2025-03-05"},
         )
 
         messages.append({"role": "assistant", "content": response.content})
