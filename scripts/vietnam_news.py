@@ -89,7 +89,7 @@ def run_news_agent():
 
     print("Searching for Vietnam news...")
     while True:
-        response = client.messages.create(
+        response = client.beta.messages.create(
             model="claude-opus-4-6",
             max_tokens=4096,
             tools=tools,
